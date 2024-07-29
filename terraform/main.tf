@@ -1,5 +1,5 @@
 resource "docker_image" "todo_image" {
-	name = "(Your Docker Image)"
+	name = "node-todo-cicd-master:latest"
 	keep_locally = false
 }
 
