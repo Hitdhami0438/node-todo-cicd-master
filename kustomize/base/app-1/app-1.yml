@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app-1-containter
-        image: (Your Docker Image)
+        image: node-todo-cicd-master:latest
         imagePullPolicy: Always
 ---
 apiVersion: v1
