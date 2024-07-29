@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: node-container
-      image: (Your Docker Image)
+      image: node-todo-cicd-master:latest
       ports:
         - containerPort: 8000
