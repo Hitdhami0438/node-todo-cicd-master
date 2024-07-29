@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
       - name: node-container-rep
-        image: (Your Docker Image)
+        image: node-todo-cicd-master:latest
