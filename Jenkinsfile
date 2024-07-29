@@ -5,7 +5,7 @@ pipeline {
         
         stage("code"){
             steps{
-                git url: "https://github.com/hitpatel0438/node-todo-cicd.git", branch: "master"
+                git url: "https://github.com/Hitdhami0438/node-todo-cicd-master.git", branch: "master"
                 echo 'bhaiyya code clone ho gaya'
             }
         }
@@ -24,8 +24,8 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId:"dockerHub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")]){
                 sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                sh "docker tag node-app-test-new:latest ${env.dockerHubUser}/node-app-test-new:latest"
-                sh "docker push ${env.dockerHubUser}/node-app-test-new:latest"
+                sh "docker tag node-todo-cicd-master:latest ${env.dockerHubUser}/node-todo-cicd-master:latest"
+                sh "docker push ${env.dockerHubUser}/node-todo-cicd-master:latest"
                 echo 'image push ho gaya'
                 }
             }
