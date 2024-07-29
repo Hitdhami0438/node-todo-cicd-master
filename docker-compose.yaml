@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web:
-    image: "(Your Docker Image)"
+    image: "node-todo-cicd-master:latest"
     ports:
       - "8000:8000"
